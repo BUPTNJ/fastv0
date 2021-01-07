@@ -1,7 +1,7 @@
 
 #judge if href_list exist
 if [ ! -e "href_list" ]; then
-    ./get_href_list.sh
+    ./get_href_list.sh > href_list
 fi
 
 city_name=$1

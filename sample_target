@@ -1,0 +1,19 @@
+BEGIN{
+	srand()
+}
+{
+	match($0,/([0-9]*).([0-9]*).([0-9]*).([0-9]*)-([0-9]*).([0-9]*).([0-9]*).([0-9]*):电信/,nums)
+    if(nums[1]!=""){
+        ip1=nums[1]+int((nums[5]-nums[1])*rand())
+        ip2=nums[2]+int((nums[6]-nums[2])*rand())
+        ip3=nums[3]+int((nums[7]-nums[3])*rand())
+        ip4=nums[4]+int((nums[8]-nums[4])*rand())
+        if(ip4==255){
+            ip4=254 #for safety
+        }
+        if(ip4==0){
+            ip4=1 #for safety
+        }
+        printf("%s.%s.%s.%s\n",ip1,ip2,ip3,ip4)
+    }
+}
