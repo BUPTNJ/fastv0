@@ -1,0 +1,3476 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="http://bczs.net" rel="dns-prefetch" />
+
+<title id="head_title">2019中国省市区县列表下载 IP地域查询</title>
+<meta name="Keywords" content="全国省市区县列表,行政区划数据库,地名数据库,地区经纬度,IP地区数据">
+<meta name="Description" content="2019中国最新省市区县行政区划IP数据下载，区县IP数据库，省市区县经纬度数据列表，全国省市区县列表">
+
+<meta name="robots" content="all" />
+<link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+<meta name="viewport" content="width=device-width, minimum-scale=0.5"/>
+<meta name="format-detection" content="telephone=no"/>
+<!--[if lt IE 8]>
+<script src="/js/ie8.js">
+</script>
+<![endif]-->
+<style type="text/css">
+body {
+	text-align: center;
+}
+.container, .container-ip {
+	text-align: center;
+	width: 100%;
+	max-width:600px;
+	display: inline-block;
+}
+.header, .mainbar, .footer {
+	text-align: center;
+	margin-top: 15px;
+}
+.center-ip {
+	display: inline-block;
+}
+#result, #format {
+	width: 90%;
+	text-align: left;
+	margin: auto;
+}
+#range, #duoshuo {
+	width: 90%;
+	text-align: center;
+	margin: auto;
+}
+</style>
+<script type="text/javascript">
+    function search() {
+        var ip = document.getElementById("ip").value;
+        if (ip == null) return false;
+        ip = ip.toLowerCase().replace(/^(\s|\xA0)+|(\s|\xA0)+$/g, '');
+        if (ip.indexOf('as') == 0) ip = ip.substring(2);
+        if (IsNum(ip)) {
+            window.location = '/AS' + ip;
+            return false;
+        }
+        else if (f_check_IP(ip)) {
+            window.location = '/' + ip;
+            return false;
+        }
+        else {
+            window.location = '/' + ip;
+            //document.getElementById("ip").value='';
+            return false;
+        }
+        return false;
+    }
+    function IsNum(s) {
+        if (s == '') return false;
+        if (s != null) {
+            var r, re;
+            re = /\d*/i;
+            r = s.match(re);
+            return (r == s) ? true : false;
+        }
+        return false;
+    }
+    function f_check_IP(ip1) {
+        var re = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;  
+        if (re.test(ip1)) {
+            if (RegExp.$1 < 256 && RegExp.$2 < 256 && RegExp.$3 < 256 && RegExp.$4 < 256)
+                return true;
+        }
+        return false;
+    }
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1309212177761596",
+        enable_page_level_ads: true
+    });
+</script>
+</head>
+<body onload="document.f_ip.ip.focus()">
+<div class="container-ip">
+    <div>
+<a href="/country/CN" title="2019最新中国国内IP地址段下载">国内IP段</a>
+    <a href="/china/CHINATELECOM_IP" title="2019最新中国电信IP地址段下载">电信IP段</a>
+    <a href="/china/CHINAUNICOM_IP" title="2019最新中国联通IP地址段下载">联通IP段</a>
+    <a href="/china/CHINAMOBILE_IP" title="2019最新中国移动IP地址段下载">移动IP段</a>
+    <a href="/china/CRNET_IP" title="2019最新中国铁通IP地址段下载">铁通IP段</a>
+    <a href="/china/CERNET_IP" title="2019最新中国教育网IP地址段下载">教育网IP段</a>
+    <a href="/countrylist" title="2019最新全球IP地址数据库">全球IP数据库</a>
+</div>
+	<div class="header">
+		<h1>
+<a href="/" title="ip查询">IP.BCZS.NET</a>
+</h1>
+	</div>
+
+	<div class="mainbar">
+		<ul class="nav nav-pills center-ip">
+			<li class="active">
+<a href="/" title="ip地址查询">IP 查询</a>
+</li>
+			<li>
+<a href="/countrylist" title="全球国家IP段">全球IP列表</a>
+</li>
+            <li>
+<a href="/city" title="国内分城市IP段">国内城市IP</a>
+</li>
+		</ul>
+	</div>
+
+	<div class="searchform">
+		<form name="f_ip" class="form-search" id="f_ip" onsubmit="retrun search();" onkeydown="if(event.keyCode==13)return false;" action="/" method="get">
+			<input name="ip" type="text" placeholder="请输入要查询的IP地址或AS号" class="span3" id="ip" onkeydown="if(event.keyCode==13){return search();}" />
+            <input id="ok" type="button" class="btn btn-primary" value="查IP" onclick="search();" />
+		</form>
+	</div>
+    
+<div id="result">
+    <div class="well">
+    <table style="width:100%">
+<thead>
+<tr>
+<td colspan="5">
+<a href="/city">国内地级市总表</a>&nbsp;&nbsp;<a href="/diming">国内区县总表</a>
+</td>
+</tr>
+<tr>
+<td colspan="5">更新日期：2019-05-18 地名数据截至：2016-07-31</td>
+</tr>
+<tr>
+<td>行政代码</td>
+<td style="width:150px">区划名称</td>
+<td>上级代码</td>
+<td>级别</td>
+<td>中心经纬度</td>
+</tr>
+</thead>
+<tbody>
+<tr class='ip2'>
+<td>110000</td>
+<td title='北京市IP地址分配表'>北京市</td>
+<td>0</td>
+<td>省/市</td>
+<td>116.407395,39.904211</td>
+</tr>
+<tr class='ip1'>
+<td>110100</td>
+<td title='北京市市辖区IP地址分配表'>
+<a href="/city/110100">市辖区</a>
+</td>
+<td>110000</td>
+<td>市级</td>
+<td>116.407395,39.904211</td>
+</tr>
+<tr class='ip2'>
+<td>120000</td>
+<td title='天津市IP地址分配表'>天津市</td>
+<td>0</td>
+<td>省/市</td>
+<td>117.200983,39.084158</td>
+</tr>
+<tr class='ip1'>
+<td>120100</td>
+<td title='天津市市辖区IP地址分配表'>
+<a href="/city/120100">市辖区</a>
+</td>
+<td>120000</td>
+<td>市级</td>
+<td>117.200983,39.084158</td>
+</tr>
+<tr class='ip2'>
+<td>130000</td>
+<td title='河北省IP地址分配表'>河北省</td>
+<td>0</td>
+<td>省/市</td>
+<td>114.468665,38.037057</td>
+</tr>
+<tr class='ip1'>
+<td>130100</td>
+<td title='河北省石家庄市IP地址分配表'>
+<a href="/city/130100">石家庄市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>114.514860,38.042307</td>
+</tr>
+<tr class='ip2'>
+<td>130200</td>
+<td title='河北省唐山市IP地址分配表'>
+<a href="/city/130200">唐山市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>118.180194,39.630867</td>
+</tr>
+<tr class='ip1'>
+<td>130300</td>
+<td title='河北省秦皇岛市IP地址分配表'>
+<a href="/city/130300">秦皇岛市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>119.600493,39.935385</td>
+</tr>
+<tr class='ip2'>
+<td>130400</td>
+<td title='河北省邯郸市IP地址分配表'>
+<a href="/city/130400">邯郸市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>114.538962,36.625657</td>
+</tr>
+<tr class='ip1'>
+<td>130500</td>
+<td title='河北省邢台市IP地址分配表'>
+<a href="/city/130500">邢台市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>114.504844,37.070589</td>
+</tr>
+<tr class='ip2'>
+<td>130600</td>
+<td title='河北省保定市IP地址分配表'>
+<a href="/city/130600">保定市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>115.464590,38.874434</td>
+</tr>
+<tr class='ip1'>
+<td>130700</td>
+<td title='河北省张家口市IP地址分配表'>
+<a href="/city/130700">张家口市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>114.886335,40.767545</td>
+</tr>
+<tr class='ip2'>
+<td>130800</td>
+<td title='河北省承德市IP地址分配表'>
+<a href="/city/130800">承德市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>117.962750,40.952942</td>
+</tr>
+<tr class='ip1'>
+<td>130900</td>
+<td title='河北省沧州市IP地址分配表'>
+<a href="/city/130900">沧州市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>116.838835,38.304477</td>
+</tr>
+<tr class='ip2'>
+<td>131000</td>
+<td title='河北省廊坊市IP地址分配表'>
+<a href="/city/131000">廊坊市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>116.683752,39.538047</td>
+</tr>
+<tr class='ip1'>
+<td>131100</td>
+<td title='河北省衡水市IP地址分配表'>
+<a href="/city/131100">衡水市</a>
+</td>
+<td>130000</td>
+<td>市级</td>
+<td>115.670177,37.738920</td>
+</tr>
+<tr class='ip2'>
+<td>140000</td>
+<td title='山西省IP地址分配表'>山西省</td>
+<td>0</td>
+<td>省/市</td>
+<td>112.562678,37.873499</td>
+</tr>
+<tr class='ip1'>
+<td>140100</td>
+<td title='山西省太原市IP地址分配表'>
+<a href="/city/140100">太原市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>112.548879,37.870590</td>
+</tr>
+<tr class='ip2'>
+<td>140200</td>
+<td title='山西省大同市IP地址分配表'>
+<a href="/city/140200">大同市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>113.300129,40.076763</td>
+</tr>
+<tr class='ip1'>
+<td>140300</td>
+<td title='山西省阳泉市IP地址分配表'>
+<a href="/city/140300">阳泉市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>113.580519,37.856972</td>
+</tr>
+<tr class='ip2'>
+<td>140400</td>
+<td title='山西省长治市IP地址分配表'>
+<a href="/city/140400">长治市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>113.116404,36.195409</td>
+</tr>
+<tr class='ip1'>
+<td>140500</td>
+<td title='山西省晋城市IP地址分配表'>
+<a href="/city/140500">晋城市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>112.851831,35.490702</td>
+</tr>
+<tr class='ip2'>
+<td>140600</td>
+<td title='山西省朔州市IP地址分配表'>
+<a href="/city/140600">朔州市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>112.432825,39.331595</td>
+</tr>
+<tr class='ip1'>
+<td>140700</td>
+<td title='山西省晋中市IP地址分配表'>
+<a href="/city/140700">晋中市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>112.752653,37.687358</td>
+</tr>
+<tr class='ip2'>
+<td>140800</td>
+<td title='山西省运城市IP地址分配表'>
+<a href="/city/140800">运城市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>111.007529,35.026412</td>
+</tr>
+<tr class='ip1'>
+<td>140900</td>
+<td title='山西省忻州市IP地址分配表'>
+<a href="/city/140900">忻州市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>112.734174,38.416663</td>
+</tr>
+<tr class='ip2'>
+<td>141000</td>
+<td title='山西省临汾市IP地址分配表'>
+<a href="/city/141000">临汾市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>111.518976,36.088005</td>
+</tr>
+<tr class='ip1'>
+<td>141100</td>
+<td title='山西省吕梁市IP地址分配表'>
+<a href="/city/141100">吕梁市</a>
+</td>
+<td>140000</td>
+<td>市级</td>
+<td>111.144319,37.518314</td>
+</tr>
+<tr class='ip2'>
+<td>150000</td>
+<td title='内蒙古自治区IP地址分配表'>内蒙古自治区</td>
+<td>0</td>
+<td>省/市</td>
+<td>111.766290,40.817390</td>
+</tr>
+<tr class='ip1'>
+<td>150100</td>
+<td title='内蒙古自治区呼和浩特市IP地址分配表'>
+<a href="/city/150100">呼和浩特市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>111.749181,40.842585</td>
+</tr>
+<tr class='ip2'>
+<td>150200</td>
+<td title='内蒙古自治区包头市IP地址分配表'>
+<a href="/city/150200">包头市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>109.840349,40.657378</td>
+</tr>
+<tr class='ip1'>
+<td>150300</td>
+<td title='内蒙古自治区乌海市IP地址分配表'>
+<a href="/city/150300">乌海市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>106.794249,39.655389</td>
+</tr>
+<tr class='ip2'>
+<td>150400</td>
+<td title='内蒙古自治区赤峰市IP地址分配表'>
+<a href="/city/150400">赤峰市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>118.886856,42.257817</td>
+</tr>
+<tr class='ip1'>
+<td>150500</td>
+<td title='内蒙古自治区通辽市IP地址分配表'>
+<a href="/city/150500">通辽市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>122.243444,43.652890</td>
+</tr>
+<tr class='ip2'>
+<td>150600</td>
+<td title='内蒙古自治区鄂尔多斯市IP地址分配表'>
+<a href="/city/150600">鄂尔多斯市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>109.781327,39.608266</td>
+</tr>
+<tr class='ip1'>
+<td>150700</td>
+<td title='内蒙古自治区呼伦贝尔市IP地址分配表'>
+<a href="/city/150700">呼伦贝尔市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>119.765745,49.211575</td>
+</tr>
+<tr class='ip2'>
+<td>150800</td>
+<td title='内蒙古自治区巴彦淖尔市IP地址分配表'>
+<a href="/city/150800">巴彦淖尔市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>107.387657,40.743213</td>
+</tr>
+<tr class='ip1'>
+<td>150900</td>
+<td title='内蒙古自治区乌兰察布市IP地址分配表'>
+<a href="/city/150900">乌兰察布市</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>113.132585,40.994786</td>
+</tr>
+<tr class='ip2'>
+<td>152200</td>
+<td title='内蒙古自治区兴安盟IP地址分配表'>
+<a href="/city/152200">兴安盟</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>122.037657,46.082463</td>
+</tr>
+<tr class='ip1'>
+<td>152500</td>
+<td title='内蒙古自治区锡林郭勒盟IP地址分配表'>
+<a href="/city/152500">锡林郭勒盟</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>116.048222,43.933454</td>
+</tr>
+<tr class='ip2'>
+<td>152900</td>
+<td title='内蒙古自治区阿拉善盟IP地址分配表'>
+<a href="/city/152900">阿拉善盟</a>
+</td>
+<td>150000</td>
+<td>市级</td>
+<td>105.728958,38.851921</td>
+</tr>
+<tr class='ip1'>
+<td>210000</td>
+<td title='辽宁省IP地址分配表'>辽宁省</td>
+<td>0</td>
+<td>省/市</td>
+<td>123.431383,41.836175</td>
+</tr>
+<tr class='ip2'>
+<td>210100</td>
+<td title='辽宁省沈阳市IP地址分配表'>
+<a href="/city/210100">沈阳市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>123.431472,41.805699</td>
+</tr>
+<tr class='ip1'>
+<td>210200</td>
+<td title='辽宁省大连市IP地址分配表'>
+<a href="/city/210200">大连市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>121.614682,38.914003</td>
+</tr>
+<tr class='ip2'>
+<td>210300</td>
+<td title='辽宁省鞍山市IP地址分配表'>
+<a href="/city/210300">鞍山市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>122.994329,41.108647</td>
+</tr>
+<tr class='ip1'>
+<td>210400</td>
+<td title='辽宁省抚顺市IP地址分配表'>
+<a href="/city/210400">抚顺市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>123.957208,41.880872</td>
+</tr>
+<tr class='ip2'>
+<td>210500</td>
+<td title='辽宁省本溪市IP地址分配表'>
+<a href="/city/210500">本溪市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>123.685143,41.486981</td>
+</tr>
+<tr class='ip1'>
+<td>210600</td>
+<td title='辽宁省丹东市IP地址分配表'>
+<a href="/city/210600">丹东市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>124.354451,40.000787</td>
+</tr>
+<tr class='ip2'>
+<td>210700</td>
+<td title='辽宁省锦州市IP地址分配表'>
+<a href="/city/210700">锦州市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>121.126846,41.095685</td>
+</tr>
+<tr class='ip1'>
+<td>210800</td>
+<td title='辽宁省营口市IP地址分配表'>
+<a href="/city/210800">营口市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>122.235418,40.667012</td>
+</tr>
+<tr class='ip2'>
+<td>210900</td>
+<td title='辽宁省阜新市IP地址分配表'>
+<a href="/city/210900">阜新市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>121.670324,42.021619</td>
+</tr>
+<tr class='ip1'>
+<td>211000</td>
+<td title='辽宁省辽阳市IP地址分配表'>
+<a href="/city/211000">辽阳市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>123.236944,41.267244</td>
+</tr>
+<tr class='ip2'>
+<td>211100</td>
+<td title='辽宁省盘锦市IP地址分配表'>
+<a href="/city/211100">盘锦市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>122.070714,41.119997</td>
+</tr>
+<tr class='ip1'>
+<td>211200</td>
+<td title='辽宁省铁岭市IP地址分配表'>
+<a href="/city/211200">铁岭市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>123.726035,42.223828</td>
+</tr>
+<tr class='ip2'>
+<td>211300</td>
+<td title='辽宁省朝阳市IP地址分配表'>
+<a href="/city/211300">朝阳市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>120.449388,41.573650</td>
+</tr>
+<tr class='ip1'>
+<td>211400</td>
+<td title='辽宁省葫芦岛市IP地址分配表'>
+<a href="/city/211400">葫芦岛市</a>
+</td>
+<td>210000</td>
+<td>市级</td>
+<td>120.836940,40.711041</td>
+</tr>
+<tr class='ip2'>
+<td>220000</td>
+<td title='吉林省IP地址分配表'>吉林省</td>
+<td>0</td>
+<td>省/市</td>
+<td>125.325862,43.896540</td>
+</tr>
+<tr class='ip1'>
+<td>220100</td>
+<td title='吉林省长春市IP地址分配表'>
+<a href="/city/220100">长春市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>125.323544,43.817072</td>
+</tr>
+<tr class='ip2'>
+<td>220200</td>
+<td title='吉林省吉林市IP地址分配表'>
+<a href="/city/220200">吉林市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>126.549572,43.837883</td>
+</tr>
+<tr class='ip1'>
+<td>220300</td>
+<td title='吉林省四平市IP地址分配表'>
+<a href="/city/220300">四平市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>124.350398,43.166420</td>
+</tr>
+<tr class='ip2'>
+<td>220400</td>
+<td title='吉林省辽源市IP地址分配表'>
+<a href="/city/220400">辽源市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>125.143660,42.887767</td>
+</tr>
+<tr class='ip1'>
+<td>220500</td>
+<td title='吉林省通化市IP地址分配表'>
+<a href="/city/220500">通化市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>125.939697,41.728401</td>
+</tr>
+<tr class='ip2'>
+<td>220600</td>
+<td title='吉林省白山市IP地址分配表'>
+<a href="/city/220600">白山市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>126.424251,41.940977</td>
+</tr>
+<tr class='ip1'>
+<td>220700</td>
+<td title='吉林省松原市IP地址分配表'>
+<a href="/city/220700">松原市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>124.825118,45.141789</td>
+</tr>
+<tr class='ip2'>
+<td>220800</td>
+<td title='吉林省白城市IP地址分配表'>
+<a href="/city/220800">白城市</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>122.838826,45.619588</td>
+</tr>
+<tr class='ip1'>
+<td>222400</td>
+<td title='吉林省延边朝鲜族自治州IP地址分配表'>
+<a href="/city/222400">延边朝鲜族自治州</a>
+</td>
+<td>220000</td>
+<td>市级</td>
+<td>129.471868,42.909409</td>
+</tr>
+<tr class='ip2'>
+<td>230000</td>
+<td title='黑龙江省IP地址分配表'>黑龙江省</td>
+<td>0</td>
+<td>省/市</td>
+<td>126.661665,45.742367</td>
+</tr>
+<tr class='ip1'>
+<td>230100</td>
+<td title='黑龙江省哈尔滨市IP地址分配表'>
+<a href="/city/230100">哈尔滨市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>126.534967,45.803775</td>
+</tr>
+<tr class='ip2'>
+<td>230200</td>
+<td title='黑龙江省齐齐哈尔市IP地址分配表'>
+<a href="/city/230200">齐齐哈尔市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>123.918186,47.354348</td>
+</tr>
+<tr class='ip1'>
+<td>230300</td>
+<td title='黑龙江省鸡西市IP地址分配表'>
+<a href="/city/230300">鸡西市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>130.969333,45.295075</td>
+</tr>
+<tr class='ip2'>
+<td>230400</td>
+<td title='黑龙江省鹤岗市IP地址分配表'>
+<a href="/city/230400">鹤岗市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>130.297964,47.349916</td>
+</tr>
+<tr class='ip1'>
+<td>230500</td>
+<td title='黑龙江省双鸭山市IP地址分配表'>
+<a href="/city/230500">双鸭山市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>131.159133,46.646509</td>
+</tr>
+<tr class='ip2'>
+<td>230600</td>
+<td title='黑龙江省大庆市IP地址分配表'>
+<a href="/city/230600">大庆市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>125.103784,46.589310</td>
+</tr>
+<tr class='ip1'>
+<td>230700</td>
+<td title='黑龙江省伊春市IP地址分配表'>
+<a href="/city/230700">伊春市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>128.841148,47.727536</td>
+</tr>
+<tr class='ip2'>
+<td>230800</td>
+<td title='黑龙江省佳木斯市IP地址分配表'>
+<a href="/city/230800">佳木斯市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>130.318879,46.799778</td>
+</tr>
+<tr class='ip1'>
+<td>230900</td>
+<td title='黑龙江省七台河市IP地址分配表'>
+<a href="/city/230900">七台河市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>131.003138,45.771727</td>
+</tr>
+<tr class='ip2'>
+<td>231000</td>
+<td title='黑龙江省牡丹江市IP地址分配表'>
+<a href="/city/231000">牡丹江市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>129.633169,44.551653</td>
+</tr>
+<tr class='ip1'>
+<td>231100</td>
+<td title='黑龙江省黑河市IP地址分配表'>
+<a href="/city/231100">黑河市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>127.528294,50.245129</td>
+</tr>
+<tr class='ip2'>
+<td>231200</td>
+<td title='黑龙江省绥化市IP地址分配表'>
+<a href="/city/231200">绥化市</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>126.968887,46.653845</td>
+</tr>
+<tr class='ip1'>
+<td>232700</td>
+<td title='黑龙江省大兴安岭地区IP地址分配表'>
+<a href="/city/232700">大兴安岭地区</a>
+</td>
+<td>230000</td>
+<td>市级</td>
+<td>124.711526,52.335262</td>
+</tr>
+<tr class='ip2'>
+<td>310000</td>
+<td title='上海市IP地址分配表'>上海市</td>
+<td>0</td>
+<td>省/市</td>
+<td>121.473701,31.230416</td>
+</tr>
+<tr class='ip1'>
+<td>310100</td>
+<td title='上海市市辖区IP地址分配表'>
+<a href="/city/310100">市辖区</a>
+</td>
+<td>310000</td>
+<td>市级</td>
+<td>116.407395,31.230416</td>
+</tr>
+<tr class='ip2'>
+<td>320000</td>
+<td title='江苏省IP地址分配表'>江苏省</td>
+<td>0</td>
+<td>省/市</td>
+<td>118.763232,32.061707</td>
+</tr>
+<tr class='ip1'>
+<td>320100</td>
+<td title='江苏省南京市IP地址分配表'>
+<a href="/city/320100">南京市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>118.796877,32.060255</td>
+</tr>
+<tr class='ip2'>
+<td>320200</td>
+<td title='江苏省无锡市IP地址分配表'>
+<a href="/city/320200">无锡市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>120.311910,31.491170</td>
+</tr>
+<tr class='ip1'>
+<td>320300</td>
+<td title='江苏省徐州市IP地址分配表'>
+<a href="/city/320300">徐州市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>117.284124,34.205768</td>
+</tr>
+<tr class='ip2'>
+<td>320400</td>
+<td title='江苏省常州市IP地址分配表'>
+<a href="/city/320400">常州市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.974062,31.811226</td>
+</tr>
+<tr class='ip1'>
+<td>320500</td>
+<td title='江苏省苏州市IP地址分配表'>
+<a href="/city/320500">苏州市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>120.585290,31.298979</td>
+</tr>
+<tr class='ip2'>
+<td>320600</td>
+<td title='江苏省南通市IP地址分配表'>
+<a href="/city/320600">南通市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>120.894291,31.980172</td>
+</tr>
+<tr class='ip1'>
+<td>320700</td>
+<td title='江苏省连云港市IP地址分配表'>
+<a href="/city/320700">连云港市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.221611,34.596653</td>
+</tr>
+<tr class='ip2'>
+<td>320800</td>
+<td title='江苏省淮安市IP地址分配表'>
+<a href="/city/320800">淮安市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.015288,33.610360</td>
+</tr>
+<tr class='ip1'>
+<td>320900</td>
+<td title='江苏省盐城市IP地址分配表'>
+<a href="/city/320900">盐城市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>120.163660,33.347316</td>
+</tr>
+<tr class='ip2'>
+<td>321000</td>
+<td title='江苏省扬州市IP地址分配表'>
+<a href="/city/321000">扬州市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.412947,32.394213</td>
+</tr>
+<tr class='ip1'>
+<td>321100</td>
+<td title='江苏省镇江市IP地址分配表'>
+<a href="/city/321100">镇江市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.425836,32.187849</td>
+</tr>
+<tr class='ip2'>
+<td>321200</td>
+<td title='江苏省泰州市IP地址分配表'>
+<a href="/city/321200">泰州市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>119.922933,32.455536</td>
+</tr>
+<tr class='ip1'>
+<td>321300</td>
+<td title='江苏省宿迁市IP地址分配表'>
+<a href="/city/321300">宿迁市</a>
+</td>
+<td>320000</td>
+<td>市级</td>
+<td>118.275198,33.963232</td>
+</tr>
+<tr class='ip2'>
+<td>330000</td>
+<td title='浙江省IP地址分配表'>浙江省</td>
+<td>0</td>
+<td>省/市</td>
+<td>120.152792,30.267443</td>
+</tr>
+<tr class='ip1'>
+<td>330100</td>
+<td title='浙江省杭州市IP地址分配表'>
+<a href="/city/330100">杭州市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>120.155070,30.274085</td>
+</tr>
+<tr class='ip2'>
+<td>330200</td>
+<td title='浙江省宁波市IP地址分配表'>
+<a href="/city/330200">宁波市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>121.543990,29.868336</td>
+</tr>
+<tr class='ip1'>
+<td>330300</td>
+<td title='浙江省温州市IP地址分配表'>
+<a href="/city/330300">温州市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>120.699362,27.993828</td>
+</tr>
+<tr class='ip2'>
+<td>330400</td>
+<td title='浙江省嘉兴市IP地址分配表'>
+<a href="/city/330400">嘉兴市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>120.758543,30.753924</td>
+</tr>
+<tr class='ip1'>
+<td>330500</td>
+<td title='浙江省湖州市IP地址分配表'>
+<a href="/city/330500">湖州市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>120.086823,30.894348</td>
+</tr>
+<tr class='ip2'>
+<td>330600</td>
+<td title='浙江省绍兴市IP地址分配表'>
+<a href="/city/330600">绍兴市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>120.586109,29.995762</td>
+</tr>
+<tr class='ip1'>
+<td>330700</td>
+<td title='浙江省金华市IP地址分配表'>
+<a href="/city/330700">金华市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>119.647421,29.079175</td>
+</tr>
+<tr class='ip2'>
+<td>330800</td>
+<td title='浙江省衢州市IP地址分配表'>
+<a href="/city/330800">衢州市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>118.859457,28.970080</td>
+</tr>
+<tr class='ip1'>
+<td>330900</td>
+<td title='浙江省舟山市IP地址分配表'>
+<a href="/city/330900">舟山市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>122.207216,29.985295</td>
+</tr>
+<tr class='ip2'>
+<td>331000</td>
+<td title='浙江省台州市IP地址分配表'>
+<a href="/city/331000">台州市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>121.420760,28.656380</td>
+</tr>
+<tr class='ip1'>
+<td>331100</td>
+<td title='浙江省丽水市IP地址分配表'>
+<a href="/city/331100">丽水市</a>
+</td>
+<td>330000</td>
+<td>市级</td>
+<td>119.922796,28.467630</td>
+</tr>
+<tr class='ip2'>
+<td>340000</td>
+<td title='安徽省IP地址分配表'>安徽省</td>
+<td>0</td>
+<td>省/市</td>
+<td>117.284903,31.861121</td>
+</tr>
+<tr class='ip1'>
+<td>340100</td>
+<td title='安徽省合肥市IP地址分配表'>
+<a href="/city/340100">合肥市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>117.227219,31.820592</td>
+</tr>
+<tr class='ip2'>
+<td>340200</td>
+<td title='安徽省芜湖市IP地址分配表'>
+<a href="/city/340200">芜湖市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>118.432941,31.352859</td>
+</tr>
+<tr class='ip1'>
+<td>340300</td>
+<td title='安徽省蚌埠市IP地址分配表'>
+<a href="/city/340300">蚌埠市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>117.389719,32.916287</td>
+</tr>
+<tr class='ip2'>
+<td>340400</td>
+<td title='安徽省淮南市IP地址分配表'>
+<a href="/city/340400">淮南市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>116.999933,32.625478</td>
+</tr>
+<tr class='ip1'>
+<td>340500</td>
+<td title='安徽省马鞍山市IP地址分配表'>
+<a href="/city/340500">马鞍山市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>118.506760,31.670452</td>
+</tr>
+<tr class='ip2'>
+<td>340600</td>
+<td title='安徽省淮北市IP地址分配表'>
+<a href="/city/340600">淮北市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>116.798265,33.955845</td>
+</tr>
+<tr class='ip1'>
+<td>340700</td>
+<td title='安徽省铜陵市IP地址分配表'>
+<a href="/city/340700">铜陵市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>117.811267,30.945516</td>
+</tr>
+<tr class='ip2'>
+<td>340800</td>
+<td title='安徽省安庆市IP地址分配表'>
+<a href="/city/340800">安庆市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>117.115101,30.531920</td>
+</tr>
+<tr class='ip1'>
+<td>341000</td>
+<td title='安徽省黄山市IP地址分配表'>
+<a href="/city/341000">黄山市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>118.337621,29.714748</td>
+</tr>
+<tr class='ip2'>
+<td>341100</td>
+<td title='安徽省滁州市IP地址分配表'>
+<a href="/city/341100">滁州市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>118.328322,32.253425</td>
+</tr>
+<tr class='ip1'>
+<td>341200</td>
+<td title='安徽省阜阳市IP地址分配表'>
+<a href="/city/341200">阜阳市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>115.814205,32.890124</td>
+</tr>
+<tr class='ip2'>
+<td>341300</td>
+<td title='安徽省宿州市IP地址分配表'>
+<a href="/city/341300">宿州市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>116.964358,33.646357</td>
+</tr>
+<tr class='ip1'>
+<td>341500</td>
+<td title='安徽省六安市IP地址分配表'>
+<a href="/city/341500">六安市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>116.521855,31.733700</td>
+</tr>
+<tr class='ip2'>
+<td>341600</td>
+<td title='安徽省亳州市IP地址分配表'>
+<a href="/city/341600">亳州市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>115.778676,33.844582</td>
+</tr>
+<tr class='ip1'>
+<td>341700</td>
+<td title='安徽省池州市IP地址分配表'>
+<a href="/city/341700">池州市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>117.491568,30.664800</td>
+</tr>
+<tr class='ip2'>
+<td>341800</td>
+<td title='安徽省宣城市IP地址分配表'>
+<a href="/city/341800">宣城市</a>
+</td>
+<td>340000</td>
+<td>市级</td>
+<td>118.758588,30.940690</td>
+</tr>
+<tr class='ip1'>
+<td>350000</td>
+<td title='福建省IP地址分配表'>福建省</td>
+<td>0</td>
+<td>省/市</td>
+<td>119.295144,26.100780</td>
+</tr>
+<tr class='ip2'>
+<td>350100</td>
+<td title='福建省福州市IP地址分配表'>
+<a href="/city/350100">福州市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>119.296494,26.074508</td>
+</tr>
+<tr class='ip1'>
+<td>350200</td>
+<td title='福建省厦门市IP地址分配表'>
+<a href="/city/350200">厦门市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>118.089425,24.479834</td>
+</tr>
+<tr class='ip2'>
+<td>350300</td>
+<td title='福建省莆田市IP地址分配表'>
+<a href="/city/350300">莆田市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>119.007777,25.454085</td>
+</tr>
+<tr class='ip1'>
+<td>350400</td>
+<td title='福建省三明市IP地址分配表'>
+<a href="/city/350400">三明市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>117.638678,26.263407</td>
+</tr>
+<tr class='ip2'>
+<td>350500</td>
+<td title='福建省泉州市IP地址分配表'>
+<a href="/city/350500">泉州市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>118.675676,24.874132</td>
+</tr>
+<tr class='ip1'>
+<td>350600</td>
+<td title='福建省漳州市IP地址分配表'>
+<a href="/city/350600">漳州市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>117.647093,24.513025</td>
+</tr>
+<tr class='ip2'>
+<td>350700</td>
+<td title='福建省南平市IP地址分配表'>
+<a href="/city/350700">南平市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>118.177708,26.641769</td>
+</tr>
+<tr class='ip1'>
+<td>350800</td>
+<td title='福建省龙岩市IP地址分配表'>
+<a href="/city/350800">龙岩市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>117.017537,25.075123</td>
+</tr>
+<tr class='ip2'>
+<td>350900</td>
+<td title='福建省宁德市IP地址分配表'>
+<a href="/city/350900">宁德市</a>
+</td>
+<td>350000</td>
+<td>市级</td>
+<td>119.547933,26.665617</td>
+</tr>
+<tr class='ip1'>
+<td>360000</td>
+<td title='江西省IP地址分配表'>江西省</td>
+<td>0</td>
+<td>省/市</td>
+<td>115.909228,28.675697</td>
+</tr>
+<tr class='ip2'>
+<td>360100</td>
+<td title='江西省南昌市IP地址分配表'>
+<a href="/city/360100">南昌市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>115.858198,28.682892</td>
+</tr>
+<tr class='ip1'>
+<td>360200</td>
+<td title='江西省景德镇市IP地址分配表'>
+<a href="/city/360200">景德镇市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>117.178443,29.268783</td>
+</tr>
+<tr class='ip2'>
+<td>360300</td>
+<td title='江西省萍乡市IP地址分配表'>
+<a href="/city/360300">萍乡市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>113.854556,27.622768</td>
+</tr>
+<tr class='ip1'>
+<td>360400</td>
+<td title='江西省九江市IP地址分配表'>
+<a href="/city/360400">九江市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>116.001930,29.705077</td>
+</tr>
+<tr class='ip2'>
+<td>360500</td>
+<td title='江西省新余市IP地址分配表'>
+<a href="/city/360500">新余市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>114.917347,27.817809</td>
+</tr>
+<tr class='ip1'>
+<td>360600</td>
+<td title='江西省鹰潭市IP地址分配表'>
+<a href="/city/360600">鹰潭市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>117.069202,28.260189</td>
+</tr>
+<tr class='ip2'>
+<td>360700</td>
+<td title='江西省赣州市IP地址分配表'>
+<a href="/city/360700">赣州市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>114.935030,25.831829</td>
+</tr>
+<tr class='ip1'>
+<td>360800</td>
+<td title='江西省吉安市IP地址分配表'>
+<a href="/city/360800">吉安市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>114.964696,27.087637</td>
+</tr>
+<tr class='ip2'>
+<td>360900</td>
+<td title='江西省宜春市IP地址分配表'>
+<a href="/city/360900">宜春市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>114.416786,27.815743</td>
+</tr>
+<tr class='ip1'>
+<td>361000</td>
+<td title='江西省抚州市IP地址分配表'>
+<a href="/city/361000">抚州市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>116.358182,27.949217</td>
+</tr>
+<tr class='ip2'>
+<td>361100</td>
+<td title='江西省上饶市IP地址分配表'>
+<a href="/city/361100">上饶市</a>
+</td>
+<td>360000</td>
+<td>市级</td>
+<td>117.943433,28.454863</td>
+</tr>
+<tr class='ip1'>
+<td>370000</td>
+<td title='山东省IP地址分配表'>山东省</td>
+<td>0</td>
+<td>省/市</td>
+<td>117.020359,36.668530</td>
+</tr>
+<tr class='ip2'>
+<td>370100</td>
+<td title='山东省济南市IP地址分配表'>
+<a href="/city/370100">济南市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>117.120000,36.651216</td>
+</tr>
+<tr class='ip1'>
+<td>370200</td>
+<td title='山东省青岛市IP地址分配表'>
+<a href="/city/370200">青岛市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>120.382609,36.067108</td>
+</tr>
+<tr class='ip2'>
+<td>370300</td>
+<td title='山东省淄博市IP地址分配表'>
+<a href="/city/370300">淄博市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>118.054927,36.813487</td>
+</tr>
+<tr class='ip1'>
+<td>370400</td>
+<td title='山东省枣庄市IP地址分配表'>
+<a href="/city/370400">枣庄市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>117.323725,34.810488</td>
+</tr>
+<tr class='ip2'>
+<td>370500</td>
+<td title='山东省东营市IP地址分配表'>
+<a href="/city/370500">东营市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>118.674767,37.434751</td>
+</tr>
+<tr class='ip1'>
+<td>370600</td>
+<td title='山东省烟台市IP地址分配表'>
+<a href="/city/370600">烟台市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>121.447935,37.463822</td>
+</tr>
+<tr class='ip2'>
+<td>370700</td>
+<td title='山东省潍坊市IP地址分配表'>
+<a href="/city/370700">潍坊市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>119.161749,36.706962</td>
+</tr>
+<tr class='ip1'>
+<td>370800</td>
+<td title='山东省济宁市IP地址分配表'>
+<a href="/city/370800">济宁市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>116.587282,35.414982</td>
+</tr>
+<tr class='ip2'>
+<td>370900</td>
+<td title='山东省泰安市IP地址分配表'>
+<a href="/city/370900">泰安市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>117.087614,36.200252</td>
+</tr>
+<tr class='ip1'>
+<td>371000</td>
+<td title='山东省威海市IP地址分配表'>
+<a href="/city/371000">威海市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>122.120420,37.513068</td>
+</tr>
+<tr class='ip2'>
+<td>371100</td>
+<td title='山东省日照市IP地址分配表'>
+<a href="/city/371100">日照市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>119.526925,35.416734</td>
+</tr>
+<tr class='ip1'>
+<td>371200</td>
+<td title='山东省莱芜市IP地址分配表'>
+<a href="/city/371200">莱芜市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>117.676724,36.213814</td>
+</tr>
+<tr class='ip2'>
+<td>371300</td>
+<td title='山东省临沂市IP地址分配表'>
+<a href="/city/371300">临沂市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>118.356414,35.104674</td>
+</tr>
+<tr class='ip1'>
+<td>371400</td>
+<td title='山东省德州市IP地址分配表'>
+<a href="/city/371400">德州市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>116.357465,37.434093</td>
+</tr>
+<tr class='ip2'>
+<td>371500</td>
+<td title='山东省聊城市IP地址分配表'>
+<a href="/city/371500">聊城市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>115.985460,36.457030</td>
+</tr>
+<tr class='ip1'>
+<td>371600</td>
+<td title='山东省滨州市IP地址分配表'>
+<a href="/city/371600">滨州市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>117.970700,37.381980</td>
+</tr>
+<tr class='ip2'>
+<td>371700</td>
+<td title='山东省菏泽市IP地址分配表'>
+<a href="/city/371700">菏泽市</a>
+</td>
+<td>370000</td>
+<td>市级</td>
+<td>115.480656,35.233750</td>
+</tr>
+<tr class='ip1'>
+<td>410000</td>
+<td title='河南省IP地址分配表'>河南省</td>
+<td>0</td>
+<td>省/市</td>
+<td>113.753602,34.765515</td>
+</tr>
+<tr class='ip2'>
+<td>410100</td>
+<td title='河南省郑州市IP地址分配表'>
+<a href="/city/410100">郑州市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>113.625328,34.746611</td>
+</tr>
+<tr class='ip1'>
+<td>410200</td>
+<td title='河南省开封市IP地址分配表'>
+<a href="/city/410200">开封市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.307583,34.797281</td>
+</tr>
+<tr class='ip2'>
+<td>410300</td>
+<td title='河南省洛阳市IP地址分配表'>
+<a href="/city/410300">洛阳市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>112.454040,34.619683</td>
+</tr>
+<tr class='ip1'>
+<td>410400</td>
+<td title='河南省平顶山市IP地址分配表'>
+<a href="/city/410400">平顶山市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>113.192661,33.766170</td>
+</tr>
+<tr class='ip2'>
+<td>410500</td>
+<td title='河南省安阳市IP地址分配表'>
+<a href="/city/410500">安阳市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.392393,36.097577</td>
+</tr>
+<tr class='ip1'>
+<td>410600</td>
+<td title='河南省鹤壁市IP地址分配表'>
+<a href="/city/410600">鹤壁市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.297273,35.747225</td>
+</tr>
+<tr class='ip2'>
+<td>410700</td>
+<td title='河南省新乡市IP地址分配表'>
+<a href="/city/410700">新乡市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>113.927016,35.303136</td>
+</tr>
+<tr class='ip1'>
+<td>410800</td>
+<td title='河南省焦作市IP地址分配表'>
+<a href="/city/410800">焦作市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>113.241823,35.215893</td>
+</tr>
+<tr class='ip2'>
+<td>410900</td>
+<td title='河南省濮阳市IP地址分配表'>
+<a href="/city/410900">濮阳市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>115.029216,35.761829</td>
+</tr>
+<tr class='ip1'>
+<td>411000</td>
+<td title='河南省许昌市IP地址分配表'>
+<a href="/city/411000">许昌市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>113.852454,34.035771</td>
+</tr>
+<tr class='ip2'>
+<td>411100</td>
+<td title='河南省漯河市IP地址分配表'>
+<a href="/city/411100">漯河市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.016536,33.580873</td>
+</tr>
+<tr class='ip1'>
+<td>411200</td>
+<td title='河南省三门峡市IP地址分配表'>
+<a href="/city/411200">三门峡市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>111.200367,34.772792</td>
+</tr>
+<tr class='ip2'>
+<td>411300</td>
+<td title='河南省南阳市IP地址分配表'>
+<a href="/city/411300">南阳市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>112.528308,32.990664</td>
+</tr>
+<tr class='ip1'>
+<td>411400</td>
+<td title='河南省商丘市IP地址分配表'>
+<a href="/city/411400">商丘市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>115.656339,34.414961</td>
+</tr>
+<tr class='ip2'>
+<td>411500</td>
+<td title='河南省信阳市IP地址分配表'>
+<a href="/city/411500">信阳市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.091023,32.146984</td>
+</tr>
+<tr class='ip1'>
+<td>411600</td>
+<td title='河南省周口市IP地址分配表'>
+<a href="/city/411600">周口市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.696951,33.626149</td>
+</tr>
+<tr class='ip2'>
+<td>411700</td>
+<td title='河南省驻马店市IP地址分配表'>
+<a href="/city/411700">驻马店市</a>
+</td>
+<td>410000</td>
+<td>市级</td>
+<td>114.022298,33.011529</td>
+</tr>
+<tr class='ip1'>
+<td>420000</td>
+<td title='湖北省IP地址分配表'>湖北省</td>
+<td>0</td>
+<td>省/市</td>
+<td>114.341745,30.546558</td>
+</tr>
+<tr class='ip2'>
+<td>420100</td>
+<td title='湖北省武汉市IP地址分配表'>
+<a href="/city/420100">武汉市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>114.305393,30.593099</td>
+</tr>
+<tr class='ip1'>
+<td>420200</td>
+<td title='湖北省黄石市IP地址分配表'>
+<a href="/city/420200">黄石市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>115.038835,30.200031</td>
+</tr>
+<tr class='ip2'>
+<td>420300</td>
+<td title='湖北省十堰市IP地址分配表'>
+<a href="/city/420300">十堰市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>110.798266,32.629398</td>
+</tr>
+<tr class='ip1'>
+<td>420500</td>
+<td title='湖北省宜昌市IP地址分配表'>
+<a href="/city/420500">宜昌市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>111.286471,30.691967</td>
+</tr>
+<tr class='ip2'>
+<td>420600</td>
+<td title='湖北省襄阳市IP地址分配表'>
+<a href="/city/420600">襄阳市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>112.122426,32.009016</td>
+</tr>
+<tr class='ip1'>
+<td>420700</td>
+<td title='湖北省鄂州市IP地址分配表'>
+<a href="/city/420700">鄂州市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>114.894843,30.391940</td>
+</tr>
+<tr class='ip2'>
+<td>420800</td>
+<td title='湖北省荆门市IP地址分配表'>
+<a href="/city/420800">荆门市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>112.199427,31.035396</td>
+</tr>
+<tr class='ip1'>
+<td>420900</td>
+<td title='湖北省孝感市IP地址分配表'>
+<a href="/city/420900">孝感市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>113.957037,30.917766</td>
+</tr>
+<tr class='ip2'>
+<td>421000</td>
+<td title='湖北省荆州市IP地址分配表'>
+<a href="/city/421000">荆州市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>112.239741,30.335165</td>
+</tr>
+<tr class='ip1'>
+<td>421100</td>
+<td title='湖北省黄冈市IP地址分配表'>
+<a href="/city/421100">黄冈市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>114.872200,30.453667</td>
+</tr>
+<tr class='ip2'>
+<td>421200</td>
+<td title='湖北省咸宁市IP地址分配表'>
+<a href="/city/421200">咸宁市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>114.322439,29.841438</td>
+</tr>
+<tr class='ip1'>
+<td>421300</td>
+<td title='湖北省随州市IP地址分配表'>
+<a href="/city/421300">随州市</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>113.382458,31.690216</td>
+</tr>
+<tr class='ip2'>
+<td>422800</td>
+<td title='湖北省恩施土家族苗族自治州IP地址分配表'>
+<a href="/city/422800">恩施土家族苗族自治州</a>
+</td>
+<td>420000</td>
+<td>市级</td>
+<td>109.488172,30.272156</td>
+</tr>
+<tr class='ip1'>
+<td>430000</td>
+<td title='湖南省IP地址分配表'>湖南省</td>
+<td>0</td>
+<td>省/市</td>
+<td>112.983810,28.112449</td>
+</tr>
+<tr class='ip2'>
+<td>430100</td>
+<td title='湖南省长沙市IP地址分配表'>
+<a href="/city/430100">长沙市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>112.938814,28.228209</td>
+</tr>
+<tr class='ip1'>
+<td>430200</td>
+<td title='湖南省株洲市IP地址分配表'>
+<a href="/city/430200">株洲市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>113.133853,27.827987</td>
+</tr>
+<tr class='ip2'>
+<td>430300</td>
+<td title='湖南省湘潭市IP地址分配表'>
+<a href="/city/430300">湘潭市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>112.944049,27.829738</td>
+</tr>
+<tr class='ip1'>
+<td>430400</td>
+<td title='湖南省衡阳市IP地址分配表'>
+<a href="/city/430400">衡阳市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>112.572018,26.893369</td>
+</tr>
+<tr class='ip2'>
+<td>430500</td>
+<td title='湖南省邵阳市IP地址分配表'>
+<a href="/city/430500">邵阳市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>111.467791,27.238893</td>
+</tr>
+<tr class='ip1'>
+<td>430600</td>
+<td title='湖南省岳阳市IP地址分配表'>
+<a href="/city/430600">岳阳市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>113.128730,29.356804</td>
+</tr>
+<tr class='ip2'>
+<td>430700</td>
+<td title='湖南省常德市IP地址分配表'>
+<a href="/city/430700">常德市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>111.698497,29.031673</td>
+</tr>
+<tr class='ip1'>
+<td>430800</td>
+<td title='湖南省张家界市IP地址分配表'>
+<a href="/city/430800">张家界市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>110.479191,29.117096</td>
+</tr>
+<tr class='ip2'>
+<td>430900</td>
+<td title='湖南省益阳市IP地址分配表'>
+<a href="/city/430900">益阳市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>112.355180,28.553860</td>
+</tr>
+<tr class='ip1'>
+<td>431000</td>
+<td title='湖南省郴州市IP地址分配表'>
+<a href="/city/431000">郴州市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>113.014718,25.770510</td>
+</tr>
+<tr class='ip2'>
+<td>431100</td>
+<td title='湖南省永州市IP地址分配表'>
+<a href="/city/431100">永州市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>111.613445,26.420394</td>
+</tr>
+<tr class='ip1'>
+<td>431200</td>
+<td title='湖南省怀化市IP地址分配表'>
+<a href="/city/431200">怀化市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>110.001923,27.569517</td>
+</tr>
+<tr class='ip2'>
+<td>431300</td>
+<td title='湖南省娄底市IP地址分配表'>
+<a href="/city/431300">娄底市</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>111.993497,27.700063</td>
+</tr>
+<tr class='ip1'>
+<td>433100</td>
+<td title='湖南省湘西土家族苗族自治州IP地址分配表'>
+<a href="/city/433100">湘西土家族苗族自治州</a>
+</td>
+<td>430000</td>
+<td>市级</td>
+<td>109.739735,28.314296</td>
+</tr>
+<tr class='ip2'>
+<td>440000</td>
+<td title='广东省IP地址分配表'>广东省</td>
+<td>0</td>
+<td>省/市</td>
+<td>113.266531,23.132191</td>
+</tr>
+<tr class='ip1'>
+<td>440100</td>
+<td title='广东省广州市IP地址分配表'>
+<a href="/city/440100">广州市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.264385,23.129110</td>
+</tr>
+<tr class='ip2'>
+<td>440200</td>
+<td title='广东省韶关市IP地址分配表'>
+<a href="/city/440200">韶关市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.597547,24.810329</td>
+</tr>
+<tr class='ip1'>
+<td>440300</td>
+<td title='广东省深圳市IP地址分配表'>
+<a href="/city/440300">深圳市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>114.057865,22.543096</td>
+</tr>
+<tr class='ip2'>
+<td>440400</td>
+<td title='广东省珠海市IP地址分配表'>
+<a href="/city/440400">珠海市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.576678,22.270978</td>
+</tr>
+<tr class='ip1'>
+<td>440500</td>
+<td title='广东省汕头市IP地址分配表'>
+<a href="/city/440500">汕头市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>116.681972,23.354091</td>
+</tr>
+<tr class='ip2'>
+<td>440600</td>
+<td title='广东省佛山市IP地址分配表'>
+<a href="/city/440600">佛山市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.121436,23.021479</td>
+</tr>
+<tr class='ip1'>
+<td>440700</td>
+<td title='广东省江门市IP地址分配表'>
+<a href="/city/440700">江门市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.081508,22.579117</td>
+</tr>
+<tr class='ip2'>
+<td>440800</td>
+<td title='广东省湛江市IP地址分配表'>
+<a href="/city/440800">湛江市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>110.359336,21.270746</td>
+</tr>
+<tr class='ip1'>
+<td>440900</td>
+<td title='广东省茂名市IP地址分配表'>
+<a href="/city/440900">茂名市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>110.925456,21.662999</td>
+</tr>
+<tr class='ip2'>
+<td>441200</td>
+<td title='广东省肇庆市IP地址分配表'>
+<a href="/city/441200">肇庆市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>112.465091,23.047192</td>
+</tr>
+<tr class='ip1'>
+<td>441300</td>
+<td title='广东省惠州市IP地址分配表'>
+<a href="/city/441300">惠州市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>114.415801,23.112257</td>
+</tr>
+<tr class='ip2'>
+<td>441400</td>
+<td title='广东省梅州市IP地址分配表'>
+<a href="/city/441400">梅州市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>116.122239,24.288615</td>
+</tr>
+<tr class='ip1'>
+<td>441500</td>
+<td title='广东省汕尾市IP地址分配表'>
+<a href="/city/441500">汕尾市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>115.375159,22.786186</td>
+</tr>
+<tr class='ip2'>
+<td>441600</td>
+<td title='广东省河源市IP地址分配表'>
+<a href="/city/441600">河源市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>114.700961,23.743686</td>
+</tr>
+<tr class='ip1'>
+<td>441700</td>
+<td title='广东省阳江市IP地址分配表'>
+<a href="/city/441700">阳江市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>111.982232,21.857958</td>
+</tr>
+<tr class='ip2'>
+<td>441800</td>
+<td title='广东省清远市IP地址分配表'>
+<a href="/city/441800">清远市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.056031,23.681764</td>
+</tr>
+<tr class='ip1'>
+<td>441900</td>
+<td title='广东省东莞市IP地址分配表'>
+<a href="/city/441900">东莞市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.751800,23.020673</td>
+</tr>
+<tr class='ip2'>
+<td>442000</td>
+<td title='广东省中山市IP地址分配表'>
+<a href="/city/442000">中山市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>113.392725,22.516999</td>
+</tr>
+<tr class='ip1'>
+<td>445100</td>
+<td title='广东省潮州市IP地址分配表'>
+<a href="/city/445100">潮州市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>116.622756,23.656704</td>
+</tr>
+<tr class='ip2'>
+<td>445200</td>
+<td title='广东省揭阳市IP地址分配表'>
+<a href="/city/445200">揭阳市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>116.372831,23.549993</td>
+</tr>
+<tr class='ip1'>
+<td>445300</td>
+<td title='广东省云浮市IP地址分配表'>
+<a href="/city/445300">云浮市</a>
+</td>
+<td>440000</td>
+<td>市级</td>
+<td>112.044491,22.915094</td>
+</tr>
+<tr class='ip2'>
+<td>450000</td>
+<td title='广西壮族自治区IP地址分配表'>广西壮族自治区</td>
+<td>0</td>
+<td>省/市</td>
+<td>108.327546,22.815478</td>
+</tr>
+<tr class='ip1'>
+<td>450100</td>
+<td title='广西壮族自治区南宁市IP地址分配表'>
+<a href="/city/450100">南宁市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>108.366543,22.817002</td>
+</tr>
+<tr class='ip2'>
+<td>450200</td>
+<td title='广西壮族自治区柳州市IP地址分配表'>
+<a href="/city/450200">柳州市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>109.428410,24.326038</td>
+</tr>
+<tr class='ip1'>
+<td>450300</td>
+<td title='广西壮族自治区桂林市IP地址分配表'>
+<a href="/city/450300">桂林市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>110.179954,25.234479</td>
+</tr>
+<tr class='ip2'>
+<td>450400</td>
+<td title='广西壮族自治区梧州市IP地址分配表'>
+<a href="/city/450400">梧州市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>111.279115,23.476963</td>
+</tr>
+<tr class='ip1'>
+<td>450500</td>
+<td title='广西壮族自治区北海市IP地址分配表'>
+<a href="/city/450500">北海市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>109.120161,21.481291</td>
+</tr>
+<tr class='ip2'>
+<td>450600</td>
+<td title='广西壮族自治区防城港市IP地址分配表'>
+<a href="/city/450600">防城港市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>108.353847,21.686860</td>
+</tr>
+<tr class='ip1'>
+<td>450700</td>
+<td title='广西壮族自治区钦州市IP地址分配表'>
+<a href="/city/450700">钦州市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>108.654147,21.979934</td>
+</tr>
+<tr class='ip2'>
+<td>450800</td>
+<td title='广西壮族自治区贵港市IP地址分配表'>
+<a href="/city/450800">贵港市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>109.598927,23.111531</td>
+</tr>
+<tr class='ip1'>
+<td>450900</td>
+<td title='广西壮族自治区玉林市IP地址分配表'>
+<a href="/city/450900">玉林市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>110.164756,22.636379</td>
+</tr>
+<tr class='ip2'>
+<td>451000</td>
+<td title='广西壮族自治区百色市IP地址分配表'>
+<a href="/city/451000">百色市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>106.618201,23.902333</td>
+</tr>
+<tr class='ip1'>
+<td>451100</td>
+<td title='广西壮族自治区贺州市IP地址分配表'>
+<a href="/city/451100">贺州市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>111.566694,24.403582</td>
+</tr>
+<tr class='ip2'>
+<td>451200</td>
+<td title='广西壮族自治区河池市IP地址分配表'>
+<a href="/city/451200">河池市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>108.085261,24.692931</td>
+</tr>
+<tr class='ip1'>
+<td>451300</td>
+<td title='广西壮族自治区来宾市IP地址分配表'>
+<a href="/city/451300">来宾市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>109.221466,23.750306</td>
+</tr>
+<tr class='ip2'>
+<td>451400</td>
+<td title='广西壮族自治区崇左市IP地址分配表'>
+<a href="/city/451400">崇左市</a>
+</td>
+<td>450000</td>
+<td>市级</td>
+<td>107.364711,22.376533</td>
+</tr>
+<tr class='ip1'>
+<td>460000</td>
+<td title='海南省IP地址分配表'>海南省</td>
+<td>0</td>
+<td>省/市</td>
+<td>110.349229,20.017378</td>
+</tr>
+<tr class='ip2'>
+<td>460100</td>
+<td title='海南省海口市IP地址分配表'>
+<a href="/city/460100">海口市</a>
+</td>
+<td>460000</td>
+<td>市级</td>
+<td>110.198293,20.044002</td>
+</tr>
+<tr class='ip1'>
+<td>460200</td>
+<td title='海南省三亚市IP地址分配表'>
+<a href="/city/460200">三亚市</a>
+</td>
+<td>460000</td>
+<td>市级</td>
+<td>109.511909,18.252847</td>
+</tr>
+<tr class='ip2'>
+<td>460300</td>
+<td title='海南省三沙市IP地址分配表'>
+<a href="/city/460300">三沙市</a>
+</td>
+<td>460000</td>
+<td>市级</td>
+<td>110.320445,20.022910</td>
+</tr>
+<tr class='ip1'>
+<td>460400</td>
+<td title='海南省儋州市IP地址分配表'>
+<a href="/city/460400">儋州市</a>
+</td>
+<td>460000</td>
+<td>市级</td>
+<td>109.476432,18.276867</td>
+</tr>
+<tr class='ip2'>
+<td>500000</td>
+<td title='重庆市IP地址分配表'>重庆市</td>
+<td>0</td>
+<td>省/市</td>
+<td>106.551556,29.563010</td>
+</tr>
+<tr class='ip1'>
+<td>500100</td>
+<td title='重庆市市辖区IP地址分配表'>
+<a href="/city/500100">市辖区</a>
+</td>
+<td>500000</td>
+<td>市级</td>
+<td>106.551556,29.563010</td>
+</tr>
+<tr class='ip2'>
+<td>500200</td>
+<td title='重庆市县IP地址分配表'>
+<a href="/city/500200">县</a>
+</td>
+<td>500000</td>
+<td>市级</td>
+<td>106.513262,29.387628</td>
+</tr>
+<tr class='ip1'>
+<td>510000</td>
+<td title='四川省IP地址分配表'>四川省</td>
+<td>0</td>
+<td>省/市</td>
+<td>104.075881,30.651226</td>
+</tr>
+<tr class='ip2'>
+<td>510100</td>
+<td title='四川省成都市IP地址分配表'>
+<a href="/city/510100">成都市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.066801,30.572816</td>
+</tr>
+<tr class='ip1'>
+<td>510300</td>
+<td title='四川省自贡市IP地址分配表'>
+<a href="/city/510300">自贡市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.778442,29.339030</td>
+</tr>
+<tr class='ip2'>
+<td>510400</td>
+<td title='四川省攀枝花市IP地址分配表'>
+<a href="/city/510400">攀枝花市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>101.718637,26.582347</td>
+</tr>
+<tr class='ip1'>
+<td>510500</td>
+<td title='四川省泸州市IP地址分配表'>
+<a href="/city/510500">泸州市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>105.442258,28.871811</td>
+</tr>
+<tr class='ip2'>
+<td>510600</td>
+<td title='四川省德阳市IP地址分配表'>
+<a href="/city/510600">德阳市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.397894,31.126856</td>
+</tr>
+<tr class='ip1'>
+<td>510700</td>
+<td title='四川省绵阳市IP地址分配表'>
+<a href="/city/510700">绵阳市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.678946,31.467495</td>
+</tr>
+<tr class='ip2'>
+<td>510800</td>
+<td title='四川省广元市IP地址分配表'>
+<a href="/city/510800">广元市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>105.843357,32.435435</td>
+</tr>
+<tr class='ip1'>
+<td>510900</td>
+<td title='四川省遂宁市IP地址分配表'>
+<a href="/city/510900">遂宁市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>105.592898,30.532847</td>
+</tr>
+<tr class='ip2'>
+<td>511000</td>
+<td title='四川省内江市IP地址分配表'>
+<a href="/city/511000">内江市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>105.058433,29.580229</td>
+</tr>
+<tr class='ip1'>
+<td>511100</td>
+<td title='四川省乐山市IP地址分配表'>
+<a href="/city/511100">乐山市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>103.765568,29.552106</td>
+</tr>
+<tr class='ip2'>
+<td>511300</td>
+<td title='四川省南充市IP地址分配表'>
+<a href="/city/511300">南充市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>106.110698,30.837793</td>
+</tr>
+<tr class='ip1'>
+<td>511400</td>
+<td title='四川省眉山市IP地址分配表'>
+<a href="/city/511400">眉山市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>103.848538,30.075440</td>
+</tr>
+<tr class='ip2'>
+<td>511500</td>
+<td title='四川省宜宾市IP地址分配表'>
+<a href="/city/511500">宜宾市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.643215,28.751769</td>
+</tr>
+<tr class='ip1'>
+<td>511600</td>
+<td title='四川省广安市IP地址分配表'>
+<a href="/city/511600">广安市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>106.633088,30.456224</td>
+</tr>
+<tr class='ip2'>
+<td>511700</td>
+<td title='四川省达州市IP地址分配表'>
+<a href="/city/511700">达州市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>107.468023,31.209572</td>
+</tr>
+<tr class='ip1'>
+<td>511800</td>
+<td title='四川省雅安市IP地址分配表'>
+<a href="/city/511800">雅安市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>103.013261,29.980537</td>
+</tr>
+<tr class='ip2'>
+<td>511900</td>
+<td title='四川省巴中市IP地址分配表'>
+<a href="/city/511900">巴中市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>106.747478,31.867903</td>
+</tr>
+<tr class='ip1'>
+<td>512000</td>
+<td title='四川省资阳市IP地址分配表'>
+<a href="/city/512000">资阳市</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>104.627636,30.128901</td>
+</tr>
+<tr class='ip2'>
+<td>513200</td>
+<td title='四川省阿坝藏族羌族自治州IP地址分配表'>
+<a href="/city/513200">阿坝藏族羌族自治州</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>102.224653,31.899413</td>
+</tr>
+<tr class='ip1'>
+<td>513300</td>
+<td title='四川省甘孜藏族自治州IP地址分配表'>
+<a href="/city/513300">甘孜藏族自治州</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>101.962311,30.049520</td>
+</tr>
+<tr class='ip2'>
+<td>513400</td>
+<td title='四川省凉山彝族自治州IP地址分配表'>
+<a href="/city/513400">凉山彝族自治州</a>
+</td>
+<td>510000</td>
+<td>市级</td>
+<td>102.267335,27.881611</td>
+</tr>
+<tr class='ip1'>
+<td>520000</td>
+<td title='贵州省IP地址分配表'>贵州省</td>
+<td>0</td>
+<td>省/市</td>
+<td>106.706301,26.599194</td>
+</tr>
+<tr class='ip2'>
+<td>520100</td>
+<td title='贵州省贵阳市IP地址分配表'>
+<a href="/city/520100">贵阳市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>106.630154,26.647661</td>
+</tr>
+<tr class='ip1'>
+<td>520200</td>
+<td title='贵州省六盘水市IP地址分配表'>
+<a href="/city/520200">六盘水市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>104.830359,26.592666</td>
+</tr>
+<tr class='ip2'>
+<td>520300</td>
+<td title='贵州省遵义市IP地址分配表'>
+<a href="/city/520300">遵义市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>106.927389,27.725654</td>
+</tr>
+<tr class='ip1'>
+<td>520400</td>
+<td title='贵州省安顺市IP地址分配表'>
+<a href="/city/520400">安顺市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>105.947594,26.253072</td>
+</tr>
+<tr class='ip2'>
+<td>520500</td>
+<td title='贵州省毕节市IP地址分配表'>
+<a href="/city/520500">毕节市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>105.291644,27.283955</td>
+</tr>
+<tr class='ip1'>
+<td>520600</td>
+<td title='贵州省铜仁市IP地址分配表'>
+<a href="/city/520600">铜仁市</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>109.189598,27.731515</td>
+</tr>
+<tr class='ip2'>
+<td>522300</td>
+<td title='贵州省黔西南布依族苗族自治州IP地址分配表'>
+<a href="/city/522300">黔西南布依族苗族自治州</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>104.906397,25.087825</td>
+</tr>
+<tr class='ip1'>
+<td>522600</td>
+<td title='贵州省黔东南苗族侗族自治州IP地址分配表'>
+<a href="/city/522600">黔东南苗族侗族自治州</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>107.982859,26.583442</td>
+</tr>
+<tr class='ip2'>
+<td>522700</td>
+<td title='贵州省黔南布依族苗族自治州IP地址分配表'>
+<a href="/city/522700">黔南布依族苗族自治州</a>
+</td>
+<td>520000</td>
+<td>市级</td>
+<td>107.522098,26.254092</td>
+</tr>
+<tr class='ip1'>
+<td>530000</td>
+<td title='云南省IP地址分配表'>云南省</td>
+<td>0</td>
+<td>省/市</td>
+<td>102.710002,25.045806</td>
+</tr>
+<tr class='ip2'>
+<td>530100</td>
+<td title='云南省昆明市IP地址分配表'>
+<a href="/city/530100">昆明市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>102.832892,24.880095</td>
+</tr>
+<tr class='ip1'>
+<td>530300</td>
+<td title='云南省曲靖市IP地址分配表'>
+<a href="/city/530300">曲靖市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>103.796167,25.490000</td>
+</tr>
+<tr class='ip2'>
+<td>530400</td>
+<td title='云南省玉溪市IP地址分配表'>
+<a href="/city/530400">玉溪市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>102.527197,24.347324</td>
+</tr>
+<tr class='ip1'>
+<td>530500</td>
+<td title='云南省保山市IP地址分配表'>
+<a href="/city/530500">保山市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>99.161761,25.112046</td>
+</tr>
+<tr class='ip2'>
+<td>530600</td>
+<td title='云南省昭通市IP地址分配表'>
+<a href="/city/530600">昭通市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>103.717465,27.338257</td>
+</tr>
+<tr class='ip1'>
+<td>530700</td>
+<td title='云南省丽江市IP地址分配表'>
+<a href="/city/530700">丽江市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>100.227751,26.855047</td>
+</tr>
+<tr class='ip2'>
+<td>530800</td>
+<td title='云南省普洱市IP地址分配表'>
+<a href="/city/530800">普洱市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>100.966512,22.825065</td>
+</tr>
+<tr class='ip1'>
+<td>530900</td>
+<td title='云南省临沧市IP地址分配表'>
+<a href="/city/530900">临沧市</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>100.088824,23.884154</td>
+</tr>
+<tr class='ip2'>
+<td>532300</td>
+<td title='云南省楚雄彝族自治州IP地址分配表'>
+<a href="/city/532300">楚雄彝族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>101.528068,25.045532</td>
+</tr>
+<tr class='ip1'>
+<td>532500</td>
+<td title='云南省红河哈尼族彝族自治州IP地址分配表'>
+<a href="/city/532500">红河哈尼族彝族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>103.374799,23.363130</td>
+</tr>
+<tr class='ip2'>
+<td>532600</td>
+<td title='云南省文山壮族苗族自治州IP地址分配表'>
+<a href="/city/532600">文山壮族苗族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>104.216248,23.400733</td>
+</tr>
+<tr class='ip1'>
+<td>532800</td>
+<td title='云南省西双版纳傣族自治州IP地址分配表'>
+<a href="/city/532800">西双版纳傣族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>100.797150,22.008811</td>
+</tr>
+<tr class='ip2'>
+<td>532900</td>
+<td title='云南省大理白族自治州IP地址分配表'>
+<a href="/city/532900">大理白族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>100.267638,25.606486</td>
+</tr>
+<tr class='ip1'>
+<td>533100</td>
+<td title='云南省德宏傣族景颇族自治州IP地址分配表'>
+<a href="/city/533100">德宏傣族景颇族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>98.584895,24.433353</td>
+</tr>
+<tr class='ip2'>
+<td>533300</td>
+<td title='云南省怒江傈僳族自治州IP地址分配表'>
+<a href="/city/533300">怒江傈僳族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>98.856601,25.817556</td>
+</tr>
+<tr class='ip1'>
+<td>533400</td>
+<td title='云南省迪庆藏族自治州IP地址分配表'>
+<a href="/city/533400">迪庆藏族自治州</a>
+</td>
+<td>530000</td>
+<td>市级</td>
+<td>99.702254,27.818757</td>
+</tr>
+<tr class='ip2'>
+<td>540000</td>
+<td title='西藏自治区IP地址分配表'>西藏自治区</td>
+<td>0</td>
+<td>省/市</td>
+<td>91.117525,29.647535</td>
+</tr>
+<tr class='ip1'>
+<td>540100</td>
+<td title='西藏自治区拉萨市IP地址分配表'>
+<a href="/city/540100">拉萨市</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>91.172110,29.652491</td>
+</tr>
+<tr class='ip2'>
+<td>540200</td>
+<td title='西藏自治区日喀则市IP地址分配表'>
+<a href="/city/540200">日喀则市</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>88.887270,29.270389</td>
+</tr>
+<tr class='ip1'>
+<td>540300</td>
+<td title='西藏自治区昌都市IP地址分配表'>
+<a href="/city/540300">昌都市</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>97.172020,31.140969</td>
+</tr>
+<tr class='ip2'>
+<td>540400</td>
+<td title='西藏自治区林芝市IP地址分配表'>
+<a href="/city/540400">林芝市</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>94.361490,29.649128</td>
+</tr>
+<tr class='ip1'>
+<td>540500</td>
+<td title='西藏自治区山南市IP地址分配表'>
+<a href="/city/540500">山南市</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>91.773134,29.237137</td>
+</tr>
+<tr class='ip2'>
+<td>542400</td>
+<td title='西藏自治区那曲地区IP地址分配表'>
+<a href="/city/542400">那曲地区</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>92.051239,31.476202</td>
+</tr>
+<tr class='ip1'>
+<td>542500</td>
+<td title='西藏自治区阿里地区IP地址分配表'>
+<a href="/city/542500">阿里地区</a>
+</td>
+<td>540000</td>
+<td>市级</td>
+<td>80.105804,32.501111</td>
+</tr>
+<tr class='ip2'>
+<td>610000</td>
+<td title='陕西省IP地址分配表'>陕西省</td>
+<td>0</td>
+<td>省/市</td>
+<td>108.954348,34.265503</td>
+</tr>
+<tr class='ip1'>
+<td>610100</td>
+<td title='陕西省西安市IP地址分配表'>
+<a href="/city/610100">西安市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>108.939770,34.341575</td>
+</tr>
+<tr class='ip2'>
+<td>610200</td>
+<td title='陕西省铜川市IP地址分配表'>
+<a href="/city/610200">铜川市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>108.945233,34.896756</td>
+</tr>
+<tr class='ip1'>
+<td>610300</td>
+<td title='陕西省宝鸡市IP地址分配表'>
+<a href="/city/610300">宝鸡市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>107.237743,34.363184</td>
+</tr>
+<tr class='ip2'>
+<td>610400</td>
+<td title='陕西省咸阳市IP地址分配表'>
+<a href="/city/610400">咸阳市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>108.708991,34.329605</td>
+</tr>
+<tr class='ip1'>
+<td>610500</td>
+<td title='陕西省渭南市IP地址分配表'>
+<a href="/city/610500">渭南市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>109.509786,34.499995</td>
+</tr>
+<tr class='ip2'>
+<td>610600</td>
+<td title='陕西省延安市IP地址分配表'>
+<a href="/city/610600">延安市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>109.489757,36.585445</td>
+</tr>
+<tr class='ip1'>
+<td>610700</td>
+<td title='陕西省汉中市IP地址分配表'>
+<a href="/city/610700">汉中市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>107.023323,33.067480</td>
+</tr>
+<tr class='ip2'>
+<td>610800</td>
+<td title='陕西省榆林市IP地址分配表'>
+<a href="/city/610800">榆林市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>109.734589,38.285390</td>
+</tr>
+<tr class='ip1'>
+<td>610900</td>
+<td title='陕西省安康市IP地址分配表'>
+<a href="/city/610900">安康市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>109.029022,32.684715</td>
+</tr>
+<tr class='ip2'>
+<td>611000</td>
+<td title='陕西省商洛市IP地址分配表'>
+<a href="/city/611000">商洛市</a>
+</td>
+<td>610000</td>
+<td>市级</td>
+<td>109.940477,33.870422</td>
+</tr>
+<tr class='ip1'>
+<td>620000</td>
+<td title='甘肃省IP地址分配表'>甘肃省</td>
+<td>0</td>
+<td>省/市</td>
+<td>103.826447,36.059561</td>
+</tr>
+<tr class='ip2'>
+<td>620100</td>
+<td title='甘肃省兰州市IP地址分配表'>
+<a href="/city/620100">兰州市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>103.834304,36.061089</td>
+</tr>
+<tr class='ip1'>
+<td>620200</td>
+<td title='甘肃省嘉峪关市IP地址分配表'>
+<a href="/city/620200">嘉峪关市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>98.289152,39.773130</td>
+</tr>
+<tr class='ip2'>
+<td>620300</td>
+<td title='甘肃省金昌市IP地址分配表'>
+<a href="/city/620300">金昌市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>102.188043,38.520089</td>
+</tr>
+<tr class='ip1'>
+<td>620400</td>
+<td title='甘肃省白银市IP地址分配表'>
+<a href="/city/620400">白银市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>104.138586,36.545015</td>
+</tr>
+<tr class='ip2'>
+<td>620500</td>
+<td title='甘肃省天水市IP地址分配表'>
+<a href="/city/620500">天水市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>105.724947,34.580864</td>
+</tr>
+<tr class='ip1'>
+<td>620600</td>
+<td title='甘肃省武威市IP地址分配表'>
+<a href="/city/620600">武威市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>102.638201,37.928267</td>
+</tr>
+<tr class='ip2'>
+<td>620700</td>
+<td title='甘肃省张掖市IP地址分配表'>
+<a href="/city/620700">张掖市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>100.449818,38.925875</td>
+</tr>
+<tr class='ip1'>
+<td>620800</td>
+<td title='甘肃省平凉市IP地址分配表'>
+<a href="/city/620800">平凉市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>106.665131,35.543061</td>
+</tr>
+<tr class='ip2'>
+<td>620900</td>
+<td title='甘肃省酒泉市IP地址分配表'>
+<a href="/city/620900">酒泉市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>98.494352,39.732819</td>
+</tr>
+<tr class='ip1'>
+<td>621000</td>
+<td title='甘肃省庆阳市IP地址分配表'>
+<a href="/city/621000">庆阳市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>107.643631,35.709077</td>
+</tr>
+<tr class='ip2'>
+<td>621100</td>
+<td title='甘肃省定西市IP地址分配表'>
+<a href="/city/621100">定西市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>104.626282,35.580663</td>
+</tr>
+<tr class='ip1'>
+<td>621200</td>
+<td title='甘肃省陇南市IP地址分配表'>
+<a href="/city/621200">陇南市</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>104.921841,33.400685</td>
+</tr>
+<tr class='ip2'>
+<td>622900</td>
+<td title='甘肃省临夏回族自治州IP地址分配表'>
+<a href="/city/622900">临夏回族自治州</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>103.210539,35.601182</td>
+</tr>
+<tr class='ip1'>
+<td>623000</td>
+<td title='甘肃省甘南藏族自治州IP地址分配表'>
+<a href="/city/623000">甘南藏族自治州</a>
+</td>
+<td>620000</td>
+<td>市级</td>
+<td>102.911027,34.983386</td>
+</tr>
+<tr class='ip2'>
+<td>630000</td>
+<td title='青海省IP地址分配表'>青海省</td>
+<td>0</td>
+<td>省/市</td>
+<td>101.780251,36.620938</td>
+</tr>
+<tr class='ip1'>
+<td>630100</td>
+<td title='青海省西宁市IP地址分配表'>
+<a href="/city/630100">西宁市</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>101.778224,36.617134</td>
+</tr>
+<tr class='ip2'>
+<td>630200</td>
+<td title='青海省海东市IP地址分配表'>
+<a href="/city/630200">海东市</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>102.104287,36.502039</td>
+</tr>
+<tr class='ip1'>
+<td>632200</td>
+<td title='青海省海北藏族自治州IP地址分配表'>
+<a href="/city/632200">海北藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>100.900998,36.954413</td>
+</tr>
+<tr class='ip2'>
+<td>632300</td>
+<td title='青海省黄南藏族自治州IP地址分配表'>
+<a href="/city/632300">黄南藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>102.015248,35.519549</td>
+</tr>
+<tr class='ip1'>
+<td>632500</td>
+<td title='青海省海南藏族自治州IP地址分配表'>
+<a href="/city/632500">海南藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>100.620373,36.286438</td>
+</tr>
+<tr class='ip2'>
+<td>632600</td>
+<td title='青海省果洛藏族自治州IP地址分配表'>
+<a href="/city/632600">果洛藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>100.244809,34.471431</td>
+</tr>
+<tr class='ip1'>
+<td>632700</td>
+<td title='青海省玉树藏族自治州IP地址分配表'>
+<a href="/city/632700">玉树藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>97.008785,32.993107</td>
+</tr>
+<tr class='ip2'>
+<td>632800</td>
+<td title='青海省海西蒙古族藏族自治州IP地址分配表'>
+<a href="/city/632800">海西蒙古族藏族自治州</a>
+</td>
+<td>630000</td>
+<td>市级</td>
+<td>97.369752,37.377139</td>
+</tr>
+<tr class='ip1'>
+<td>640000</td>
+<td title='宁夏回族自治区IP地址分配表'>宁夏回族自治区</td>
+<td>0</td>
+<td>省/市</td>
+<td>106.258754,38.471318</td>
+</tr>
+<tr class='ip2'>
+<td>640100</td>
+<td title='宁夏回族自治区银川市IP地址分配表'>
+<a href="/city/640100">银川市</a>
+</td>
+<td>640000</td>
+<td>市级</td>
+<td>106.230909,38.487194</td>
+</tr>
+<tr class='ip1'>
+<td>640200</td>
+<td title='宁夏回族自治区石嘴山市IP地址分配表'>
+<a href="/city/640200">石嘴山市</a>
+</td>
+<td>640000</td>
+<td>市级</td>
+<td>106.383304,38.983236</td>
+</tr>
+<tr class='ip2'>
+<td>640300</td>
+<td title='宁夏回族自治区吴忠市IP地址分配表'>
+<a href="/city/640300">吴忠市</a>
+</td>
+<td>640000</td>
+<td>市级</td>
+<td>106.198394,37.997461</td>
+</tr>
+<tr class='ip1'>
+<td>640400</td>
+<td title='宁夏回族自治区固原市IP地址分配表'>
+<a href="/city/640400">固原市</a>
+</td>
+<td>640000</td>
+<td>市级</td>
+<td>106.242610,36.015855</td>
+</tr>
+<tr class='ip2'>
+<td>640500</td>
+<td title='宁夏回族自治区中卫市IP地址分配表'>
+<a href="/city/640500">中卫市</a>
+</td>
+<td>640000</td>
+<td>市级</td>
+<td>105.196902,37.499973</td>
+</tr>
+<tr class='ip1'>
+<td>650000</td>
+<td title='新疆维吾尔自治区IP地址分配表'>新疆维吾尔自治区</td>
+<td>0</td>
+<td>省/市</td>
+<td>87.627704,43.793026</td>
+</tr>
+<tr class='ip2'>
+<td>650100</td>
+<td title='新疆维吾尔自治区乌鲁木齐市IP地址分配表'>
+<a href="/city/650100">乌鲁木齐市</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>87.616848,43.825592</td>
+</tr>
+<tr class='ip1'>
+<td>650200</td>
+<td title='新疆维吾尔自治区克拉玛依市IP地址分配表'>
+<a href="/city/650200">克拉玛依市</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>84.889207,45.579889</td>
+</tr>
+<tr class='ip2'>
+<td>650400</td>
+<td title='新疆维吾尔自治区吐鲁番市IP地址分配表'>
+<a href="/city/650400">吐鲁番市</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>89.189655,42.951384</td>
+</tr>
+<tr class='ip1'>
+<td>650500</td>
+<td title='新疆维吾尔自治区哈密市IP地址分配表'>
+<a href="/city/650500">哈密市</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>93.514797,42.827255</td>
+</tr>
+<tr class='ip2'>
+<td>652300</td>
+<td title='新疆维吾尔自治区昌吉回族自治州IP地址分配表'>
+<a href="/city/652300">昌吉回族自治州</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>87.308225,44.011183</td>
+</tr>
+<tr class='ip1'>
+<td>652700</td>
+<td title='新疆维吾尔自治区博尔塔拉蒙古自治州IP地址分配表'>
+<a href="/city/652700">博尔塔拉蒙古自治州</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>82.066387,44.906065</td>
+</tr>
+<tr class='ip2'>
+<td>652800</td>
+<td title='新疆维吾尔自治区巴音郭楞蒙古自治州IP地址分配表'>
+<a href="/city/652800">巴音郭楞蒙古自治州</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>86.145298,41.764115</td>
+</tr>
+<tr class='ip1'>
+<td>652900</td>
+<td title='新疆维吾尔自治区阿克苏地区IP地址分配表'>
+<a href="/city/652900">阿克苏地区</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>80.260605,41.168779</td>
+</tr>
+<tr class='ip2'>
+<td>653000</td>
+<td title='新疆维吾尔自治区克孜勒苏柯尔克孜自治州IP地址分配表'>
+<a href="/city/653000">克孜勒苏柯尔克孜自治州</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>76.167819,39.714526</td>
+</tr>
+<tr class='ip1'>
+<td>653100</td>
+<td title='新疆维吾尔自治区喀什地区IP地址分配表'>
+<a href="/city/653100">喀什地区</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>75.989755,39.470400</td>
+</tr>
+<tr class='ip2'>
+<td>653200</td>
+<td title='新疆维吾尔自治区和田地区IP地址分配表'>
+<a href="/city/653200">和田地区</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>79.922211,37.114157</td>
+</tr>
+<tr class='ip1'>
+<td>654000</td>
+<td title='新疆维吾尔自治区伊犁哈萨克自治州IP地址分配表'>
+<a href="/city/654000">伊犁哈萨克自治州</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>81.324136,43.916823</td>
+</tr>
+<tr class='ip2'>
+<td>654200</td>
+<td title='新疆维吾尔自治区塔城地区IP地址分配表'>
+<a href="/city/654200">塔城地区</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>82.980317,46.745364</td>
+</tr>
+<tr class='ip1'>
+<td>654300</td>
+<td title='新疆维吾尔自治区阿勒泰地区IP地址分配表'>
+<a href="/city/654300">阿勒泰地区</a>
+</td>
+<td>650000</td>
+<td>市级</td>
+<td>88.141253,47.844924</td>
+</tr>
+<tr class='ip2'>
+<td>710000</td>
+<td title='台湾省IP地址分配表'>台湾省</td>
+<td>0</td>
+<td>省/市</td>
+<td>120.712002,22.615802</td>
+</tr>
+<tr class='ip1'>
+<td>810000</td>
+<td title='香港特别行政区IP地址分配表'>香港特别行政区</td>
+<td>0</td>
+<td>省/市</td>
+<td>114.109497,22.396428</td>
+</tr>
+<tr class='ip2'>
+<td>820000</td>
+<td title='澳门特别行政区IP地址分配表'>澳门特别行政区</td>
+<td>0</td>
+<td>省/市</td>
+<td>113.543873,22.198745</td>
+</tr>
+    </tbody>
+</table>
+    </div>
+</div>
+
+
+	<div class="footer">
+		<p>©2019 IP.bczs.net 全球IP数据库 在线IP地址查询 国内运营商IP段<br />
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备13008804号-2</a>
+</p>
+	</div>
+<div style="display:none">
+<script src="https://s11.cnzz.com/z_stat.php?id=2559816&web_id=2559816" language="JavaScript" type="text/javascript">
+</script>
+</div>
+</div>
+<script type="text/javascript">
+          (function () {
+              var bp = document.createElement('script');
+              var curProtocol = window.location.protocol.split(':')[0];
+              if (curProtocol === 'https') {
+                  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+              }
+              else {
+                  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+              }
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(bp, s);
+          })();
+</script>
+</body>
+</html>

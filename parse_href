@@ -1,0 +1,20 @@
+BEGIN{
+	flag=0
+}
+{
+	if(flag==1){
+    		flag=0
+            	match($0,/<a href="(.*)">(.*)<\/a>/,href)
+            	if(href[1]!=""){
+            		printf(":http://ip.bczs.net%s\n",href[1])
+            	}
+	}		
+        if(city_name[1]!=""){
+	        printf("%s",city_name[1])
+   	}
+        match($0,/<td title='(.*)IP地址分配表'>/,city_name)
+   	if(city_name[1]!=""){
+		printf("%s",city_name[1])
+	        flag=1
+	}
+}
