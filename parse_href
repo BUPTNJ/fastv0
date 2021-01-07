@@ -7,7 +7,7 @@ BEGIN{
 		flag=0
 		match($0,/<a href="(.*)">(.*)<\/a>/,href)
 		if(href[1]!=""){
-			printf("%s:http://ip.bczs.net%s\n",temp_city,href[1])
+			printf("%s http://ip.bczs.net%s\n",temp_city,href[1])
 		}
 	}		
 	match($0,/<td title='(.*)IP地址分配表'>/,city_name)
