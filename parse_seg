@@ -1,0 +1,33 @@
+BEGIN{
+	city_name="未命名"
+    isp=""
+    cnt=0
+    ip_seg_start=""
+    ip_seg_end=""
+}
+{
+    match($0,/.*<b>(.*)IP地址<\/b>共计.*/,temp)
+    if(temp[1]!=""){
+        city_name=temp[1]
+        printf("%s\n",city_name)
+    }
+    if(isp=="unknown"){
+        if(cnt==3){
+            match($0,/<td>(.*)<\/td>/,temp)
+            if(temp[1]!=""){
+                isp=temp[1]
+            }
+            cnt=0
+            printf("%s-%s:%s\n",ip_seg_start,ip_seg_end,isp)
+        }
+        else{
+            cnt=cnt+1
+        }
+    }
+    match($0,/.*title=".*IP地址段:(.*)-(.*)">.*<\/a>/,ip_segs)
+	if(ip_segs[1]!=""){
+        ip_seg_start=ip_segs[1]
+        ip_seg_end=ip_segs[2]
+        isp="unknown"
+    }
+}
