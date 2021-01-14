@@ -11,6 +11,6 @@ for city_name in $city_names
 do
     file_name=./seg/"$city_name"_seg
     if [ ! -e $file_name ]; then
-        ./get_city_seg.sh $city_name > ./seg/"$city_name"_seg
+        ./get_city_seg.sh $city_name > $file_name
     fi
 done
