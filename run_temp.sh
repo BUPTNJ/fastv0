@@ -1,3 +1,4 @@
-./temp.sh 乐山
-./temp.sh 南充
-./temp.sh 广元
+./temp.sh 南平 $1
+./temp.sh 赣州 $1
+./temp.sh 九江 $1
+./temp.sh 鹰潭 $1
