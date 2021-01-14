@@ -12,6 +12,6 @@ wget $href -O $file_name
 echo "formatting html file...">&2
 ./format.sh $file_name
 cat $file_name |gawk -f parse_seg
-echo "cleaning html..."
+echo "cleaning html...">&2
 rm $file_name
 echo "done!">&2
